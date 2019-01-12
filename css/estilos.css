@@ -1,0 +1,324 @@
+@font-face {
+  font-family: akrobat-extrabold;
+  src: url("./fnt/Akrobat-ExtraBold.otf");
+}
+@font-face {
+  font-family: akrobat-regular;
+  src: url("./fnt/Akrobat-Regular.otf");
+}
+@font-face {
+  font-family: akrobat-thin;
+  src: url("./fnt/Akrobat-Thin.otf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  width: 100%;
+}
+.pInfo{
+  width: 100%;
+  background-color: #4c4641;
+  display: flex;
+  flex-flow: column ;
+  align-items: center;
+  grid-row: 1/2;
+  padding: 2.5% 0 2.5% 0;
+}
+.texto{
+  display: flex;
+  flex-flow: column ;
+  align-items: center;
+}
+.pInfo h1{
+  font-family: akrobat-thin;
+  font-size: 10vw;
+  color: white;
+  border-bottom: 1vw solid #ed704e;
+}
+.pInfo h3{
+  color: white;
+  font-size: 8vw;
+  font-family: akrobat-extrabold;
+}
+.pInfo h4{
+  color: white;
+  font-size: 6vw;
+  font-family: akrobat-regular;
+  display: none;
+}
+.pInfo .hexagon{
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  max-width: 75%;
+}
+.pInfo img{
+  max-width: 100%;
+}
+
+.skills{
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-row: 2/3;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.skills h3{
+  font-family: akrobat-extrabold;
+  font-size: 8vw;
+
+}
+.skills img{
+  max-width: 75%;
+  padding: 2.5% 0 2.5% 0;
+}
+.git{
+  padding: 2.5% 0 2.5% 0;
+  grid-row: 1/2;
+  background-color: #EDE5D0;
+}
+.java{
+  padding: 2.5% 0 2.5% 0;
+  grid-row: 2/3;
+  background-color: #e6e4e1;
+}
+.htmlcss{
+  padding: 2.5% 0 2.5% 0;
+  grid-row: 3/4;
+  background-color: #EDE5D0;
+}
+.mysql{
+  padding: 2.5% 0 2.5% 0;
+  grid-row: 4/5;
+  background-color: #e6e4e1;
+}
+
+.experiencia{
+  width: 100%;
+  background-color: #C4C3C0;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2.5% 0 2.5% 0;
+}
+.experiencia h3{
+  font-family: akrobat-extrabold;
+  border-bottom: solid 1vw #ed704e;
+  margin: 2%;
+  font-size: 8vw;
+  display: inline-block;
+}
+.experiencia p{
+  font-family: akrobat-regular;
+  margin: 3%;
+  font-size: 5vw;
+}
+
+.footer{
+  background-color:  #4c4641;
+  width: 100%;
+  text-align: center;
+  grid-row: 4/5;
+  padding: 2.5% 0 2.5% 0;
+}
+.footer p{
+  font-family: akrobat-regular;
+  color: white;
+  font-size: 3vw;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .pInfo{
+    width: 100%;
+    background-color: #4c4641;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-row: 1/2;
+    padding: 2.5% 0 2.5% 0;
+  }
+  .texto{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    max-width: 70%;
+    text-align: center;
+  }
+  .pInfo h1{
+
+    border-bottom: 0.5vw solid #ed704e;
+  }
+  .hexagon{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-left: 5%;
+  }
+  .pInfo h4{
+    color: white;
+    font-size: 4vw;
+    font-family: akrobat-regular;
+    display: block;
+  }
+  .skills{
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto ;
+    grid-template-columns: 50% 50%;
+    grid-row: 2/3;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .git{
+
+    height: 93%;
+  }
+  .htmlcss{
+    padding: 2.5% 0 2.5% 0;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: #EDE5D0;
+  }
+  .mysql{
+    padding: 2.5% 0 2.5% 0;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: #e6e4e1;
+  }
+  .experiencia h3{
+    border-bottom: solid 0.5vw #ed704e;
+    font-size: 6vw;
+  }
+  .experiencia p{
+    font-family: akrobat-regular;
+    margin: 3%;
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .container{
+    grid-template-rows: 30% auto auto;
+    grid-template-columns: 25% 75%;
+  }
+  .pInfo{
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    grid-row: 1/4;
+    grid-column: 1/2;
+  }
+
+  .pInfo h1{
+    font-family: akrobat-thin;
+    font-size: 4vw;
+    color: white;
+    border-bottom: 0.25vw solid #ed704e;
+  }
+  .pInfo h3{
+    color: white;
+    font-size: 3vw;
+    font-family: akrobat-extrabold;
+  }
+  .pInfo h4{
+    color: white;
+    font-size: 2vw;
+    font-family: akrobat-regular;
+    display: block;
+  }
+
+  .skills{
+    background-color: #e6e4e1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto;
+    grid-row: 1/2;
+
+
+  }
+  .git{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: inherit;
+
+  }
+  .java{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: inherit;
+
+  }
+  .htmlcss{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background-color: inherit;
+
+  }
+  .mysql{
+    grid-row: 1/2;
+    grid-column: 4/5;
+    background-color: inherit;
+
+  }
+  .skills h3{
+
+    font-size: 2.5vw;
+
+  }
+  .experiencia{
+
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5% 0 2.5% 0;
+  }
+  #exp1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #exp2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #exp3{
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .experiencia h3{
+    border-bottom: solid 0.25vw #ed704e;
+    font-size: 2.5vw;
+  }
+  .experiencia p{
+    font-family: akrobat-regular;
+    margin: 3%;
+    font-size: 1.25vw;
+  }
+  .footer{
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+  }
+  .footer p{
+    font-family: akrobat-regular;
+    color: white;
+    font-size: 1.25vw;
+  }
+}
